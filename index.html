@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clean Force 24.de – Reinigungsunternehmen</title>
+  
+  <!-- Google Font: Schreibschrift -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <!-- Lightbox CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
@@ -18,6 +24,12 @@
       color: white;
       padding: 40px 20px;
       text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8em;
+      margin: 0;
     }
 
     main {
@@ -47,22 +59,27 @@
       padding-left: 20px;
     }
 
-    .gallery {
+    .scroll-gallery {
       display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
     }
 
-    .gallery a img {
-      width: 250px;
-      height: auto;
+    .scroll-gallery a {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+
+    .scroll-gallery img {
+      width: 280px;
       border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
       transition: transform 0.3s ease;
     }
 
-    .gallery a img:hover {
+    .scroll-gallery img:hover {
       transform: scale(1.05);
     }
 
@@ -87,12 +104,6 @@
       padding: 15px;
       font-size: 0.9em;
     }
-
-    @media (max-width: 600px) {
-      .gallery a img {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 <body>
@@ -115,18 +126,12 @@
 
     <section class="galerie">
       <h2>Vorher-Nachher Galerie</h2>
-      <div class="gallery">
-        <a href="vorher-nachher.jpg" data-lightbox="reinigung" data-title="Eingangsreinigung"><img src="vorher-nachher.jpg" alt="vorher-nachher"></a>
-        <a href="bild1.jpg" data-lightbox="reinigung" data-title="Bild 1"><img src="bild1.jpg" alt="bild1"></a>
-        <a href="bild2.jpg" data-lightbox="reinigung" data-title="Bild 2"><img src="bild2.jpg" alt="bild2"></a>
-        <a href="bild3.jpg" data-lightbox="reinigung" data-title="Bild 3"><img src="bild3.jpg" alt="bild3"></a>
+      <div class="scroll-gallery">
+        <a href="vorher-nachher.jpg" data-lightbox="galerie" data-title="Eingangsreinigung"><img src="vorher-nachher.jpg" alt="vorher-nachher"></a>
+        <a href="bild1.jpg" data-lightbox="galerie" data-title="Bild 1"><img src="bild1.jpg" alt="bild1"></a>
+        <a href="bild2.jpg" data-lightbox="galerie" data-title="Bild 2"><img src="bild2.jpg" alt="bild2"></a>
+        <a href="bild3.jpg" data-lightbox="galerie" data-title="Bild 3"><img src="bild3.jpg" alt="bild3"></a>
       </div>
-    </section>
-
-    <section class="bewertungen">
-      <h2>Was unsere Kunden sagen</h2>
-      <p><strong>„Unsere Einfahrt sah aus wie neu – top Arbeit!“</strong><br>– A. Yildiz</p>
-      <p><strong>„Schnell, freundlich & sauber. Jederzeit wieder.“</strong><br>– Familie Schulz</p>
     </section>
 
     <section class="kontakt">
