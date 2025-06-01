@@ -1,50 +1,79 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clean Force 24.de – Reinigungsunternehmen</title>
-  <style> 
-    .responsive-image {
-  display: block;
-  margin: 20px auto;
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-}
+  <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
     }
+
     header {
-      background: #0c4e8a;
+      background-color: #007bff;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
     main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    section {
+      background: white;
       padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    img {
-      max-width: 100%;
+
+    h2 {
+      color: #007bff;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img.responsive-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 600px;
+      width: 100%;
       height: auto;
-      margin: 20px 0;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
-    .leistungen, .kontakt, .impressum {
-      margin-top: 40px;
-    }
-    .kontakt a {
-      color: #0c4e8a;
+
+    a {
+      color: #007bff;
       text-decoration: none;
     }
+
     footer {
-      background: #f2f2f2;
-      padding: 20px;
+      background: #f1f1f1;
       text-align: center;
+      padding: 20px;
       font-size: 0.9em;
-      color: #555;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
     }
   </style>
 </head>
@@ -52,7 +81,7 @@
 
   <header>
     <h1>Clean Force 24.de</h1>
-    <p>Ihr zuverlässiges Reinigungsunternehmen in der Region</p>
+    <p>Professionelle Reinigung mit Hochdruck & Präzision</p>
   </header>
 
   <main>
