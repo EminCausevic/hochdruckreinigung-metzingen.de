@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clean Force 24.de – Reinigungsunternehmen</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #1e1e1e;
       color: #f1f1f1;
     }
@@ -19,11 +20,6 @@
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-
     main {
       max-width: 900px;
       margin: 0 auto;
@@ -31,30 +27,15 @@
     }
 
     section {
-      background: #2c2c2c;
+      background: #2b2b2b;
       padding: 20px;
       margin-bottom: 30px;
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
       color: #0d6efd;
-      margin-top: 0;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    img.responsive-image {
-      display: block;
-      margin: 20px auto;
-      max-width: 600px;
-      width: 100%;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     }
 
     a {
@@ -62,17 +43,54 @@
       text-decoration: none;
     }
 
+    ul {
+      padding-left: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery a img {
+      width: 250px;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery a img:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      font-size: 24px;
+      padding: 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      z-index: 999;
+    }
+
     footer {
       background: #111;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
       color: #aaa;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5em;
+      .gallery a img {
+        width: 100%;
       }
     }
   </style>
@@ -88,23 +106,28 @@
     <section class="leistungen">
       <h2>Unsere Leistungen</h2>
       <ul>
-        <li>✅ Hochdruckreinigung (Terrassen, Eingänge etc.) – ca. <strong>7,00 € pro m²</strong>, je nach Verschmutzung</li>
+        <li>✅ Hochdruckreinigung (Terrassen, Eingänge etc.) – ca. <strong>7,00 € pro m²</strong></li>
         <li>✅ Fensterreinigung – <strong>pauschal 10 € pro Fenster</strong></li>
-        <li>✅ Treppenhausreinigung – <strong>pauschal 30–50 € pro Reinigung</strong></li>
+        <li>✅ Treppenhausreinigung – <strong>30–50 € pro Reinigung</strong></li>
         <li>✅ Weitere Außenreinigungen auf Anfrage</li>
       </ul>
     </section>
 
     <section class="galerie">
-  <h2>Vorher-Nachher Galerie</h2>
-  <div style="display: flex; overflow-x: auto; gap: 20px; padding-bottom: 10px; scroll-snap-type: x mandatory;">
-    <img src="vorher-nachher.jpg" alt="vorher-nachher" style="flex: 0 0 auto; width: 280px; border-radius: 6px; scroll-snap-align: start; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
-    <img src="bild1.jpg" alt="bild1" style="flex: 0 0 auto; width: 280px; border-radius: 6px; scroll-snap-align: start; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
-    <img src="bild2.jpg" alt="bild2" style="flex: 0 0 auto; width: 280px; border-radius: 6px; scroll-snap-align: start; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
-    <img src="bild3.jpg" alt="bild3" style="flex: 0 0 auto; width: 280px; border-radius: 6px; scroll-snap-align: start; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
-  </div>
-</section>
-    
+      <h2>Vorher-Nachher Galerie</h2>
+      <div class="gallery">
+        <a href="vorher-nachher.jpg" data-lightbox="reinigung" data-title="Eingangsreinigung"><img src="vorher-nachher.jpg" alt="vorher-nachher"></a>
+        <a href="bild1.jpg" data-lightbox="reinigung" data-title="Bild 1"><img src="bild1.jpg" alt="bild1"></a>
+        <a href="bild2.jpg" data-lightbox="reinigung" data-title="Bild 2"><img src="bild2.jpg" alt="bild2"></a>
+        <a href="bild3.jpg" data-lightbox="reinigung" data-title="Bild 3"><img src="bild3.jpg" alt="bild3"></a>
+      </div>
+    </section>
+
+    <section class="bewertungen">
+      <h2>Was unsere Kunden sagen</h2>
+      <p><strong>„Unsere Einfahrt sah aus wie neu – top Arbeit!“</strong><br>– A. Yildiz</p>
+      <p><strong>„Schnell, freundlich & sauber. Jederzeit wieder.“</strong><br>– Familie Schulz</p>
+    </section>
 
     <section class="kontakt">
       <h2>Kontakt</h2>
@@ -114,24 +137,24 @@
 
     <section class="impressum">
       <h2>Impressum</h2>
-      <p>Angaben gemäß § 5 TMG:</p>
       <p>Emin Causevic<br>
       Clean Force 24<br>
       Einsteinstraße 14<br>
       72555 Metzingen<br>
       Deutschland</p>
-
       <p>Telefon: +49 176 24092211<br>
       E-Mail: kontakt@cleanforce24.de</p>
-
       <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
-      Emin Causevic, Adresse wie oben</p>
+      Emin Causevic</p>
     </section>
   </main>
+
+  <a class="whatsapp-float" href="https://wa.me/4917624092211" target="_blank" title="Jetzt über WhatsApp schreiben">💬</a>
 
   <footer>
     &copy; 2025 Clean Force 24 – Alle Rechte vorbehalten
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
